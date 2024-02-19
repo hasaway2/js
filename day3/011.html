@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>타이핑하면 복사하기</h1>
+  <input type="text" id="text1">  
+  <span id="target"></span>      
+  <script>
+    // 웹프로그래밍에서 사용하는 이벤트는 버튼 click 아니면 keyup(엔터)
+    // 키보드에 대한 이벤트는 보통 keyup을 사용한다
+    let $text1 = $('#text1');
+    let $target = $('#target');
+
+    $text1.on('keyup', function(e) {
+      $target.text($text1.val());
+      // 이벤트 객체: 이벤트를 처리하기 위한 부가 정보
+      // 이벤트 handler : 이벤트를 처리하는 함수
+      //                  이벤트핸들러는 인자를 가지지 않는다
+      //                  인자가 있다면 이벤트 객체
+      if(e.keyCode===13) {
+        alert("엔터 입력");
+      }
+    })
+  </script>
+</body>
+</html>

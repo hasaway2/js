@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>for문</title>
+</head>
+<body>
+  <script>
+    let ar = [75,80,70,90,85];
+    // 일반 for문 : 자바와 동일
+    for(let i=0; i<=5; i++) {
+      console.log(ar[i]);
+    }
+
+    // for each반복문 : 배열에서 원소를 하나씩 꺼낸다
+    //   js에서는 of, 파이썬에서는 in
+    for(element of ar) {
+      console.log(element);
+    }
+  </script>
+</body>
+</html>

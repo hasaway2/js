@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>배열을 입력하기</title>
+</head>
+<body>
+  <!-- emmet -->
+  <input type="number" id="num">
+  <button id="btn">입력</button>
+  <div id="target">
+  </div>
+  <script>
+    // 숫자를 입력하면 배열에 저장해 출력
+    let ar=[];
+
+    let $num = $('#num');
+    let $btn = $('#btn');
+    let $target = $('#target');
+
+    $btn.on('click', function() {
+      let num = $num.val();
+      $num.val('');
+      $num.focus();
+      ar.push(num);
+      $target.text(ar);
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p id="target1">display 속성</p>
+  <button id="none">display</button>
+  <hr>
+  <p id="target2">visibility 속성</p>
+  <button id="hidden">hidden</button>
+  <script>
+    // display:none과 visibility:hidden 설명해라
+    // display를 클릭하면 target1을 none
+    // hidden버튼을 클릭하면 target2를 hidden
+    let $target1 = $('#target1');
+    let $target2 = $('#target2');
+    let $none = $('#none');
+    let $hidden = $('#hidden');
+    $none.on('click', function() {
+      $target1.css('display','none');
+    });
+    $hidden.on('click', function() {
+      $target2.css('visibility','hidden');
+    })
+  </script>
+</body>
+</html>

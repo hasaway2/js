@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    #canvas {
+      width: 500px;
+      height: 500px;
+      border: 1px solid red;
+    }
+  </style>
+  <title>Document</title>
+</head>
+<body>
+  <h1>마우스 좌표 출력</h1>
+  <div id="canvas">
+  </div>
+  <div id="target">
+  </div>
+  <script>
+    // #canvas에서 움직이는 마우스의 좌표를 출력
+    let $canvas = $('#canvas');
+    let $target = $('#target');
+    $canvas.on('mousemove', function(e) {
+      let x = e.pageX;
+      let y = e.pageY;
+      // x좌표:342, y좌표:125
+      let str = `x좌표:${x}, y좌표:${y}`;
+      $target.text(str);
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>10번예제 수정</title>
+</head>
+<body>
+  <input type="number" id="num">
+  <div id="target">
+  </div>
+  <script>
+    let ar = [];
+    let $num = $('#num');
+    let $target = $('#target');
+
+    $num.on('keyup', function(e) {
+      if(e.keyCode===13) {
+        ar.push($num.val());
+        $num.val('');
+        let sum=0;
+        for(let a of ar) {
+          sum+=parseInt(a);
+        }
+        $target.text(`합계:${sum}, 평균:${sum/ar.length}`);
+      }
+    })
+  </script>
+</body>
+</html>

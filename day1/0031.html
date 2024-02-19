@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jQuery를 사용하기</title>
+  <!-- CDN으로 땡겨오기 -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+  <!--
+    jQuery
+    자바스크립트를 간편하게 작성할 수 있는 함수들의 집합(라이브러리)
+    (프레임워크 : 라이브러리 + 사용법)
+  -->
+  <h1>적정체중 계산</h1>
+  <p>적정체중:<span id="target"></span></p>
+  <input type="text" id="ki" placeholder="키 입력..."><br>
+  <button onclick="체중계산()">적정체중계산</button>
+  <script>
+    function 체중계산() {
+      const ki_element = $('#ki');
+      const target = $('#target');
+      const weight = ki_element.value - 105;
+      target.text(weight+'kg');
+    }
+
+  </script>
+</body>
+</html>

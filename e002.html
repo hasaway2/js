@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #canvas {
+      width: 500px;
+      height: 500px;
+      border: 1px solid red;
+    }
+  </style>
+</head>
+<body>
+  <div id="canvas"></div>
+  <div id="target"></div>
+  <script>
+    let isDown = false;
+    let $canvas = $('#canvas');
+    let $target = $('#target');
+
+    $canvas.on('mousemove', function(e) {
+      let x = e.pageX;
+      let y = e.pageY;
+      if(!isDown) {
+        $target.text(`x:${x}, y:${y} (마우스 이동)`);
+      } else {
+        $target.text(`x:${x}, y:${y} (마우스 드래그)`);
+      }
+    })
+
+    $canvas.on('mousedown', function() {
+      isDown=true;
+      console.log(isDown)
+    });
+
+    $canvas.on('mouseup', function() {
+      isDown=false;
+      console.log(isDown)
+    });
+  </script>
+</body>
+</html>

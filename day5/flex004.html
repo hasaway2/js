@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 스타일의 종류 : 외부스타일(*.css), 내부스타일, inline  스타일 */
+    div {
+      width:100px; height:100px; text-align: center;
+      line-height: 100px;
+    }
+    /* position 속성의 기본값은 static */
+    #move {
+      position: absolute;
+      /*
+        absolute
+          - 부모를 기준으로 이동
+          - 부모가 없으면 화면 좌측상단 기준으로 이동
+          - 부모?
+            relative만이 부모가 될 수 있다
+          - 원래 위치는 채워진다
+        relative
+          - 자신의 원래 위치를 기준으로 이동
+          - 원래 위치는 비어있다
+        결론
+          - relative는 부모가 되고
+          - absolute로 이동
+      */
+      top: 20px;
+      left: 500px;
+    }
+  </style>
+</head>
+<body>
+  <div style="background-color: darkcyan;">A</div>
+  <div style="background-color: deeppink;">B</div>
+  <div id="move" style="background-color: blueviolet;">C</div>
+  <div style="background-color: aquamarine;">D</div>
+</body>
+</html>

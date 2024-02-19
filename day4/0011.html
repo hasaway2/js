@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <title>할일관리 출력</title>
+</head>
+<body>
+  <input type="text" id="title">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>번호</th>
+        <th>할일</th>
+        <th>날짜</th>
+      </tr>
+    </thead>
+    <tbody id="tbody">
+    </tbody>
+  </table>
+  <script>
+    let todos = [];
+    let tno = 3;
+    todos.push({tno:1, title:'잠자기', writeday:'2024-02-16'});
+    todos.push({tno:2, title:'밥먹기', writeday:'2024-02-16'});
+    // 출력할 요소를 선택
+    let $tbody = $('#tbody');
+    // 입력 요소를 선택
+    let $title = $('#title');
+
+    // #title에 키를 타이핑하면 익명함수를 실행해라 
+    // callback 함수 : 내가 만들고 자바스크립트에 위탁 실행
+    // e : 이벤트 객체(이벤트 부가정보를 담은 객체)
+    //     자바스크립트가 자동으로 넣어준다
+    $title.on('keyup', function(e) {
+      if(e.keyCode===13) {
+        const title = $title.val();
+        let todo = {tno:tno++, title:title, writeday:'2024-02-16'};
+        todos.push(todo);
+        printTodos();
+      }
+    })
+    function printTodos() {
+      $tbody.empty();
+      for(t of todos) {
+        let html = `
+          <tr>
+            <td>${t.tno}</td><td>${t.title}</td><td>${t.writeday}</td>
+          </tr>
+        `;
+        $tbody.append(html);
+      }
+    }
+    printTodos();
+  </script>
+</body>
+</html>

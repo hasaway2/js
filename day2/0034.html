@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>  
+  <title>Document</title>
+</head>
+<body>
+  <!--
+    년도를 입력받아 경복궁 입장료를 출력하시오
+    입장료는 25세이상 64세까지 "3000원"
+        js로 코딩하는데 nai라는 변수에 나이가 들었어
+        25세이상 64세까지 조건 어떻게 만들어?
+    기타는 "무료"
+  -->
+  태어난 년도:<input type="number" id="birth_year">
+  <button onclick="입장료계산()">출력</button>
+  <script>
+    function 입장료계산() {
+      let date = new Date();
+      let thisYear = date.getFullYear();
+      let nai = thisYear - $('#birth_year').val();
+      if(nai>=25 && nai<65) {
+        alert("입장료는 3000원");
+      } else {
+        alert("입장료는 무료");
+      }
+    }
+  </script>
+</body>
+</html>

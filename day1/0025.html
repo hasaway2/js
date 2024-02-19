@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!--
+    키를 입력하면 적정체중을 출력하기(적정체중 : 키-105)
+  -->
+  <p>적정체중:<span id="target"></span></p>
+  <input type="text" id="ki" placeholder="키 입력....">
+  <button onclick="체중계산();">적정체중 계산</button>
+  <script>
+    function 체중계산() {
+      const ki_element = document.getElementById('ki');
+      const ki = parseInt(ki_element.value);
+      const weight = ki - 105;
+      document.getElementById('target').innerHTML = weight + 'kg';
+    }
+  </script>
+</body>
+</html>

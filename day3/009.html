@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>배열의 합계와 평균</title>
+</head>
+<body>
+  <script>
+    let ar = [75,80,70,90,85];
+    console.log(typeof ar);     // object
+
+    let sum = 0;
+    for(a of ar) {
+      sum+=a;
+    }
+    console.log(sum);
+    console.log(sum/ar.length);
+  </script>
+</body>
+</html>

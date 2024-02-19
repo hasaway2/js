@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Browser Object Model</title>
+</head>
+<body>
+
+  <!--
+    자바스크립트는 웹브라우저를 객체로 취급(BOM)
+    window객체 - history, location, document, console, navigator
+  -->
+  <script>
+  // window.navigator : 웹브라우저 정보
+  window.console.log(window.navigator.userAgent);
+
+  // 객체 내부 : 필드(값)와 메소드(기능)
+  console.log(location.href);
+
+  location.reload();
+
+  location.href = "http://www.naver.com";
+  </script>
+</body>
+</html>

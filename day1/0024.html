@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- document.getElementById, innerHTML, onclick -->
+  <h1>숫자를 제곱해서 출력하기</h1>
+  <p>제곱값 : <span id="target"></span></p>
+  <input type="text" id="num" placeholder="숫자 입력....">
+  <button onclick="제곱();">제곱하기</button>
+  <script>
+    function 제곱() {
+      const target = document.getElementById('target');
+      const num_ele = document.getElementById('num');
+      const num = parseInt(num_ele.value);
+      target.innerHTML = num * num;
+    }
+  </script>
+</body>
+</html>

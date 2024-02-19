@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jQuery 메소드: text val attr css</title>
+</head>
+<body>
+  <p id="p1">우리나라 좋은나라</p>
+  <input type="text" id="input1" value="우리나라 좋은나라">
+  <script>
+    // input요소(input, select, textarea)의 값은 val()로 읽고 쓴다
+    // input이 아닌 요소는 text()로 읽고 쓴다
+    // 스타일은 css()로 읽고 쓴다
+    // 요소의 속성은 attr()로 읽고 쓴다
+    console.log($('#p1').text());
+    $('#p1').text('');
+    // jQuery 메소드 chaining
+    $('#p1').css('border','1px solid red').css('height','100px');
+    console.log($('#p1').css('height'));
+  </script>
+</body>
+</html>

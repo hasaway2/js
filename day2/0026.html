@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>callback 함수</title>
+  <script>
+    // setInterval : 정해진 간격으로 기능을 실행한다
+    let i=1;
+    function insa() {
+      console.log(`${i++}번째 안녕하세요`);
+    }
+    //setInterval(insa, 1000)
+
+    setInterval(function() {
+      let d = new Date();
+      console.log(d);
+    }, 1000)
+  </script>
+</head>
+<body>
+</body>
+</html>

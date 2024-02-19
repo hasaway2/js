@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>for문</title>
+</head>
+<body>
+  <script>
+    // 배열 : 파이썬의 리스트
+    let ar = [75, 80, 70, 85, 80];
+
+    console.log(ar[0])
+    console.log(ar[1])
+    console.log(ar[2])
+    console.log(ar[3])
+    console.log(ar[4])
+
+    // 자바의 for
+    for(let i=0; i<5; i++)
+      console.log(ar[i]);
+
+    /* 합계
+    합계 : 75 + 80 + 70 + 85 + 80
+    ->
+    합계 : sum = ar[0] + ar[1] + ar[2] + ar[3] + ar[4]
+    */
+    let sum = 0;
+    for(let i=0; i<5; i++) {
+      sum=sum + ar[i];
+    }
+    console.log('합계:' + sum);
+  </script>
+</body>
+</html>

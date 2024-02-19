@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <title>덧셈기</title>
+</head>
+<body>
+  <input type="text" id="val1">+
+  <input type="text" id="val2">=
+  <input type="text" id="result" disabled>
+  <button id="add">덧셈하기</button>
+  <script>
+    // jQuery로 선택한 요소와 js로 선택한 요소는 호환X
+    // 1. 필요한 요소들 모두 선택
+    let $val1 = $('#val1');
+    let $val2 = $('#val2');
+    let $result = $('#result');
+    let $add = $('#add');
+    // 2. 더하자
+    $add.on('click', function() {
+      // callback
+      let sum = parseInt($val1.val()) + parseInt($val2.val());
+      $result.val(sum);
+    })
+  </script>
+</body>
+</html>

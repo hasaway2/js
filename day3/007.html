@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>인덱스 연습</title>
+</head>
+<body>
+  <div id="target">
+
+  </div>
+  <button id="first">첫번째 원소</button>
+  <button>두번째 원소</button>
+  <button>세번째 원소</button>
+  <script>
+    let games = ['리그 오브 레전드', 'FC온라인', '발로란트'];
+    // 첫번째 버튼을 누르면 배열의 0번째, 두번째 버튼 누르면 1번째,
+    // 세번째 버튼 누르면 2번째 원소를 출력하시오
+    $('#first').on('click', function() {
+      $target.text(games[0]);
+    })
+  </script>
+</body>
+</html>

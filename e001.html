@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #target {
+      width: 100px;
+      height: 100px;
+    }
+    .rect {
+      border-radius: 0px;
+      background-color: red;
+    }
+    .circle {
+      border-radius: 100px;
+      background-color: blue;
+    }
+  </style>
+</head>
+<body>
+  <div id="target" class="rect"></div>
+  <button id="btn">원으로</button>
+  <script>
+    let isRect = true;
+    let $btn = $('#btn');
+    let $target = $('#target');
+
+    $btn.on('click', function() {
+      if(isRect) {
+        $target.removeClass('rect');
+        $target.addClass('circle');
+        $btn.text('원으로');
+        isRect=!isRect;
+      } else {
+        $target.removeClass('circle');
+        $target.addClass('rect');
+        $btn.text('사각형으로');
+        isRect=!isRect;
+      }
+    })
+  </script>
+</body>
+</html>

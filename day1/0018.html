@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM</title>
+</head>
+<body>
+  <p>입력값 : <span id="target"></span></p>
+  <input type="text" id="num" value="100">
+  <script>
+    const num = document.getElementById('num').value;
+    // string : input 요소로 입력하면 글자
+    console.log(typeof num);        
+    const target = document.getElementById('target');
+    target.innerHTML = num;
+  </script>
+</body>
+</html>

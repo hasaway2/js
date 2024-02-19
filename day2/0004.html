@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>스크립트의 위치</title>
+  <script>
+    // 줄마다 세미콜론을 자동으로 넣는다
+    // head영역의 자바스크립트는 body에 접근할 수 없다
+    alert('헤드 영역');    
+  </script>
+</head>
+<body>
+  <div></div>
+  <script>
+    // body영역 마지막의 자바스크립트는 body에 접근 가능
+    alert('body 영역')
+  </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  <h1>최저임금 계산기</h1>
+  <p>연봉:<span id="target"></span></p>
+  <input type="text" id="pay" placeholder="최저임금...">
+  <button onclick="계산();">계산</button>
+  <script>
+    function 계산() {
+      // input요소에서 value를 꺼낸다
+      const pay = $('#pay').val();
+      const 연봉 = pay * 209 * 12;
+      $('#target').text(연봉);
+    }
+  </script>
+</body>
+</html>

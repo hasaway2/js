@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <title>display:none의 사용</title>
+  <style>
+    input, textarea {
+      display: block;
+    }
+    textarea { height: 300px; }
+  </style>
+</head>
+<body>
+  <input type="text" id="title">
+  <textarea id="content"></textarea>
+  <button id="delete">삭제</button>
+  <script>
+    let board = {
+      title: '가입인사',
+      content: '잘 부탁드려요',
+      writer: 'spring',
+      loginId: ''
+    };
+    let $title = $('#title');
+    let $content = $('#content');
+    let $delete = $('#delete');
+
+    $title.val(board.title);
+    $content.val(board.content);
+
+    if(board.writer!==board.loginId) {
+      $title.attr('disabled', true);
+      $content.attr('disabled', true);
+      $delete.hide();
+    }
+
+  </script>  
+</body>
+</html>

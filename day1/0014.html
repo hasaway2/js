@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>타입 변환</title>
+  <script>
+    const a = 5;
+    const b = '20';
+
+    console.log(a+b);           // '520'
+    console.log(typeof (a+b))   // string
+
+    // 자바스크립트는 되는 방향으로 형변환해서 실행
+    // 숫자와 문자를 곱하라고 하면 문자를 숫자로 변환 : 5*20
+    console.log(a*b);           // 100
+
+    const c = 20;
+    // 비교연산 == : 값만 비교
+    console.log(b==c);
+
+    // 타입까지 비교
+    console.log(b===c);
+
+  </script>
+</head>
+<body>
+</body>
+</html>

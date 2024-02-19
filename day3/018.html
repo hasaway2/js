@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="text" id="artist">
+  <ul id="ul">
+    <li>임영웅</li>
+    <li>세븐틴</li>
+    <li>르세라핌</li>
+    <li>아이브</li>
+    <li>아이유</li>
+  </ul>
+  <script>
+    let $artist = $('#artist');
+    let $ul = $('#ul');
+
+    $artist.on('keyup', function(e) {
+      if(e.keyCode===13) {
+        let artist = $artist.val();
+        $ul.append(`<li>${artist}</li>`);
+      }
+    });
+    // 정적인 요소에 대해서만 동작
+    /*
+    $('li').on('click', function() {
+      alert('클릭했어요');
+    })
+    */
+
+    // 동적인 요소 이벤트를 처리하려면 선택자를 2개
+    $('#ul').on('click','li', function() {
+      alert('클릭했어요');
+    });
+
+    const ar= [11, 22, 33];
+    for(let a of ar) {
+      $target.append(`<li class='red' data-value="${a}">${a}</li>`)
+    }
+
+    $('.red').on('click', function() {
+      $(this)
+    })
+  </script>
+</body>
+</html>

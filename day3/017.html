@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jQuery append</title>
+</head>
+<body>
+  <h1>값을 입력하면 ul에 출력하기</h1>
+  <input type="number" id="num">
+  <ul id="target">
+  </ul>
+  <script>
+    let $num = $('#num');
+    let $target = $('#target');
+
+    $num.on('keyup', function(e) {
+      if(e.keyCode===13) {
+        let num = $num.val();
+        $target.append(`<li>${num}</li>`)
+      }
+    })
+  </script>
+</body>
+</html>

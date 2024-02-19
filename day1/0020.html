@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p>덧셈 결과 : <span id="target"></span></p>
+  첫번째 숫자:<input type="text" id="num1">
+  두번째 숫자:<input type="text" id="num2">
+  <button>더하기</button>
+  <script>
+    // #num1, #num2의 값을 더해 #target에 출력하시오
+    const num1 = document.getElementById('num1');
+    const num2 = document.getElementById('num2');
+    const target = document.getElementById('target');
+    // parseInt : 문자열을 정수로 변환
+    target.innerHTML=parseInt(num1.value)+parseInt(num2.value);
+  </script>
+</body>
+</html>

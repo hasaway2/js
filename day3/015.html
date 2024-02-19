@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jQuery 메소드 chaining</title>
+</head>
+<body>
+  <div id="target"></div>
+  <script>
+    let $target = $('#target');
+    $target.text('우리나라 좋은나라').css('color','red')
+      .css('border','1px solid red').attr('class','red');
+  </script>
+</body>
+</html>

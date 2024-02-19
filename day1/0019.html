@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p>이메일 : <span id="target"></span></p>
+  <input type="text" value="spring@naver.com" id="email">
+  <script>
+    // css, js는 선택자로 작업한다
+    // 서버로 넘길때는 name이 있어야한다
+    const email = document.getElementById('email');
+    const target = document.getElementById('target');
+
+    target.innerHTML = email.value;
+  </script>
+</body>
+</html>

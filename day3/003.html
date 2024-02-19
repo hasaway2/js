@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #target { height:100px; width:100px; background-color: red;}
+  </style>
+</head>
+<body>
+  <div id="target">
+  </div>  
+  <button id="circle">원으로</button>
+  <button id="rect" disabled>사각형으로</button>
+  <script>
+    // 1. 요소들을 선택
+    let $target = $('#target');
+    let $circle = $('#circle');
+    let $rect = $('#rect');
+    // 2. 
+    $circle.on('click', function() {
+      $target.css('border-radius','100px')
+        .css('background-color','blue');
+      // disable, readonly는 값이 true/false
+      $circle.attr('disabled', true);
+      $rect.attr('disabled', false);
+    });
+    $rect.on('click', function() {
+      $target.css('border-radius','0px')
+      .css('background-color','red');
+      $circle.attr('disabled', false);
+      $rect.attr('disabled', true);
+    })
+
+
+  </script>
+</body>
+</html>
