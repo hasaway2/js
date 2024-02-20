@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>콜백 지옥</title>
+</head>
+<body>
+  <script>
+    // A->B->C 순서대로 ajax가 실행되야 한다면
+    $.ajax({
+      url:'A',
+      success:function() {
+        // 성공했을 때 실행되는 콜백 함수
+        $.ajax({
+          url:'B',
+          success:function() {
+            $.ajax({
+              url:'C',
+              success:function() {
+                console.log('다 끝났다')
+              }
+            })
+          }
+        })
+      }
+    });
+
+  </script>
+</body>
+</html>

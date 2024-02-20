@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <title>Document</title>
+  <script>
+    $(document).ready(function() {
+      const title = $('#title').val();
+      console.log($('#title'));
+      $('#add').on('click', function() {
+        $.ajax({
+          url: "https://koreanjson.com/todos",
+          method: "post",
+          data: "title=" + title,
+          success:function(result) {
+            console.log(result);
+          }, error:function(response) {
+            console.log(response);
+          }
+        })
+      })
+    })
+  </script>
+</head>
+<body>
+  <input id="title" type="text" value="aaaaaaaa">
+  <button id="add">추가</button>
+</body>
+</html>
